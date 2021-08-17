@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.0.1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Dashboard</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../public/css/bootstrap.css" rel="stylesheet">
+
+  <style>
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="../public/css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+                            <!--Head-->
+  <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3 bg-light " href="#" style="color: black;">CMS</a>
+    <!--them link trang chu-->
+    <div class="dropdown nav justify-content-end">
+        <a class="btn btn-secondary dropdown-toggle bg-light" style="color: rgb(28, 97, 247);" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-user "></i>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="#">sdas</a></li>
+          <li><a class="dropdown-item" href="#">dsad</a></li>
+        </ul>
+      </div>
+</nav>
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="sidebar-sticky pt-3">
+          <!--danh cho tim kiem-->
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <input id="inputSearch" class="form-control " type="text" placeholder="Search"
+              aria-label="Search">
+              <a id="btnSearch" class="nav-link" href="#"><i class="fa fa-search"></i></a>
+            </ul>
+            <!--danh cho tage khac-->
+            <ul class="nav flex-column">
+              <a class="nav-link active" href="#">
+                <i class="fa fa-calendar"></i>
+                <span data-feather="home"></span>
+                View content
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <i class="fa fa-edit"></i>
+                form content
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      
+                          <!--tage -->
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Edit Profile </h1>
+          </div>
+          <div>
+            <!--noi them phan con lai-->
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter the first name">
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter the last name">
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label">Email</label>
+              <input type="email" class="form-control" id="formGroupExampleInput" placeholder="">
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Phone</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your phone number">
+            </div>
+            <div class="mb-3">
+              <label for="floatingTextarea">Description</label>
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary bg-light " type="button" style="color: black;">Submit Buttom</button>
+              <button class="btn btn-primary bg-light " type="button" style="color: black;">Reser Button</button>
+            </div>
+          </div>
+      </main>
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
