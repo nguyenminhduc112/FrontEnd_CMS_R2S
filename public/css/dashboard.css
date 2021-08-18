@@ -60,10 +60,15 @@ body {
 .sidebar .nav-link .feather {
   margin-right: 4px;
   color: #999;
+
 }
 
-.sidebar .nav-link.active {
+.sidebar .nav-link{
   color: #007bff;
+}
+.sidebar .nav-link.active {
+  background-color: rgb(214, 207, 207);
+
 }
 
 .sidebar .nav-link:hover .feather,

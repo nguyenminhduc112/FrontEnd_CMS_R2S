@@ -3232,7 +3232,7 @@ input[type="button"].btn-block {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -105px;
   z-index: 1000;
   display: none;
   float: left;
@@ -4300,6 +4300,7 @@ input[type="button"].btn-block {
   margin-top: -1px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+
 }
 
 .nav-pills .nav-link {
@@ -4371,6 +4372,7 @@ input[type="button"].btn-block {
 
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
+  background-color: #f8f9fa !important;
 }
 
 .navbar-nav {
@@ -4391,6 +4393,7 @@ input[type="button"].btn-block {
 .navbar-nav .dropdown-menu {
   position: static;
   float: none;
+
 }
 
 .navbar-text {

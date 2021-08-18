@@ -1,12 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm Nội Dung</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.0.1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Dashboard</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../public/css/bootstrap.css" rel="stylesheet">
+
+  <style>
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="../public/css/dashboard.css" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Nguyễn Minh Đức</h1>
+  <!--Head-->
+  <div id="wrapper">
+    <header class="bg-light sticky-top">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div class="col-md-12 ">
+            <nav class="navbar navbar-dark  flex-md-nowrap p-0 shadow">
+              <a class="navbar-brand text-dark col-md-3 col-lg-2 mr-0 px-3 bg-light " href="#"
+                style="box-shadow: none!important;">CMS</a>
+              <!--them link trang chu-->
+              <div class="dropdown col-md-0 justify-content-end">
+                <button type="button" class="btn btn-secondary dropdown-toggle bg-light"
+                  style="color: rgb(28, 97, 247);" data-toggle="dropdown">
+
+                  <i class="fa fa-user "></i>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="edit.html"> <i class="fa fa-user "></i> User info</a>
+                  <a class="dropdown-item" href="login.html"> <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    Logout</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="content">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div class="col-md-12 px-0">
+            <!-- Sidebar -->
+            <div id="sidebar" class="col-md-3 col-lg-2">
+              <nav id="sidebarMenu" class=" d-md-block bg-light  sidebar collapse">
+                <div class="sidebar-sticky ">
+                  <!--danh cho tim kiem-->
+                  <ul class="nav flex-column p-3 border">
+                    <li class="nav-item">
+                      <input id="inputSearch" class="form-control " type="text" placeholder="Search"
+                        aria-label="Search">
+                      <a id="btnSearch" class="nav-link" href="#"><i class="fa fa-search"></i></a>
+                    </li>
+                  </ul>
+                  <!--danh cho tage khac-->
+                  <ul class="nav flex-column">
+                    <a class="nav-link " href="#">
+                      <i class="fa fa-calendar"></i>
+                      <span data-feather="home"></span>
+                      View content
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="add-content.html">
+                        <i class="fa fa-edit"></i>
+                        Form content
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+
+            <!-- content -->
+            <section class="col-md-9 px-0 ml-sm-auto col-lg-10">
+              <div class="px-md-5">
+                <div
+                  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                  <h1 class="h2">Add Content</h1>
+                </div>
+                <div>
+                  <!--noi them phan con lai-->
+                  <form action="" method="POST">
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">Title</label>
+                      <input type="text" name="title" class="form-control" id="formGroupExampleInput"
+                        placeholder="Enter the title">
+                    </div>
+                    <div class="mb-3">
+                      <label for="floatingTextarea">Brief</label>
+                      <textarea class="form-control" name="brief" 
+                        id="floatingTextarea"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="floatingTextarea">Content</label>
+                        <textarea class="form-control" rows="5" name="content"
+                          id="floatingTextarea"></textarea>
+                      </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary bg-light " type="submit" name="btn_submit" style="color: black;">Submit
+                        Buttom</button>
+                      <button class="btn btn-primary bg-light " type="submit" name="btn_reser" style="color: black;">Reser
+                        Button</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
