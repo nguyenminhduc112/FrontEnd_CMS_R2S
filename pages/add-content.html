@@ -13,7 +13,7 @@
   <title>Dashboard</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="../public/css/bootstrap.css" rel="stylesheet">
+  <link href="public/css/bootstrap.css" rel="stylesheet">
 
   <style>
     @media (min-width: 768px) {
@@ -23,7 +23,7 @@
     }
   </style>
   <!-- Custom styles for this template -->
-  <link href="../public/css/dashboard.css" rel="stylesheet">
+  <link href="public/css/dashboard.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,8 +44,8 @@
                   <i class="fa fa-user "></i>
                 </button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="edit.html"> <i class="fa fa-user "></i> User info</a>
-                  <a class="dropdown-item" href="login.html"> <i class="fa fa-sign-out" aria-hidden="true"></i>
+                  <a class="dropdown-item" href="?page=edit"> <i class="fa fa-user "></i> User info</a>
+                  <a class="dropdown-item" href="?page=login"> <i class="fa fa-sign-out" aria-hidden="true"></i>
                     Logout</a>
                 </div>
               </div>
@@ -72,14 +72,14 @@
                   </ul>
                   <!--danh cho tage khac-->
                   <ul class="nav flex-column">
-                    <a class="nav-link " href="#">
+                    <a class="nav-link " href="?page=view-content">
                       <i class="fa fa-calendar"></i>
                       <span data-feather="home"></span>
                       View content
                     </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="add-content.html">
+                      <a class="nav-link active" href="?page=add-content">
                         <i class="fa fa-edit"></i>
                         Form content
                       </a>
