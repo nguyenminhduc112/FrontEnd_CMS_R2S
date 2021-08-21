@@ -7,11 +7,10 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Jekyll v4.0.1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Dashboard</title>
-
   <style>
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
@@ -41,8 +40,8 @@
                   <i class="fa fa-user "></i>
                 </button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="?page=edit"> <i class="fa fa-user "></i> User info</a>
-                  <a class="dropdown-item" href="?page=login"> <i class="fa fa-sign-out" aria-hidden="true"></i>
+                  <a class="dropdown-item" href="edit.html"> <i class="fa fa-user "></i> User info</a>
+                  <a class="dropdown-item" href="login.html"> <i class="fa fa-sign-out" aria-hidden="true"></i>
                     Logout</a>
                 </div>
               </div>
@@ -69,15 +68,15 @@
                   </ul>
                   <!--danh cho tage khac-->
                   <ul class="nav flex-column">
-                    <li class="nav-item">
-                    <a class="nav-link " href="?page=view-content">
-                      <i class="fa fa-calendar"></i>
-                      <span data-feather="home"></span>
-                      View content
-                    </a>
+                    <li class="nav-item ">
+                      <a class="nav-link active" href="view-content.html">
+                        <i class="fa fa-calendar"></i>
+                        <span data-feather="home"></span>
+                        View content
+                      </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="?page=add-content">
+                      <a class="nav-link" href="add-content.html">
                         <i class="fa fa-edit"></i>
                         Form content
                       </a>
@@ -92,39 +91,51 @@
               <div class="px-md-5">
                 <div
                   class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                  <h1 class="h2">Add Content</h1>
+                  <h1 class="h2">View Content</h1>
                 </div>
-                <div>
-                  <!--noi them phan con lai-->
-                  <div class="card">
-                    <div class="card-header">
-                      Content Form Elements
-                    </div>
-                    <div class="card-body">
-                      <form action="">
-                        <div class="mb-3">
-                          <label for="formGroupExampleInput" class="form-label">Title</label>
-                          <input type="text" name="title" class="form-control" id="formGroupExampleInput"
-                            placeholder="Enter the title">
-                        </div>
-                        <div class="mb-3">
-                          <label for="floatingTextarea">Brief</label>
-                          <textarea class="form-control" name="brief" id="floatingTextarea"></textarea>
-                        </div>
-                        <div class="mb-3">
-                          <label for="floatingTextarea">Content</label>
-                          <textarea class="form-control" rows="5" name="content" id="floatingTextarea"></textarea>
-                        </div>
-                        <div class="col-12">
-                          <button class="btn btn-primary bg-light " type="submit" name="btn_submit"
-                            style="color: black;">Submit
-                            Buttom</button>
-                          <button class="btn btn-primary bg-light " type="submit" name="btn_reser"
-                            style="color: black;">Reser
-                            Button</button>
-                        </div>
-                      </form>
-                    </div>
+                <div class="card">
+                  <div class="card-header">
+                    View Content List
+                  </div>
+                  <div class="card-body">
+                    <table class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Title</th>
+                          <th>Brief</th>
+                          <th>Created Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Lorem ipsum dolor sit amet</td>
+                          <td>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.
+                          </td>
+                          <td>31/08/2016 12:03</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Vestibulum tincidunt est vitae</td>
+                          <td>
+                            Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                          </td>
+                          <td>31/08/2016 13:13</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Aliquam ornare lacus adipiscing</td>
+                          <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vestibulum tincidunt est vitae ultrices accumsan.
+                          </td>
+                          <td>31/08/2016 15:09</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>

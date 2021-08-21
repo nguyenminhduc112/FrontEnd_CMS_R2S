@@ -41,8 +41,8 @@
                   <i class="fa fa-user "></i>
                 </button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="?page=edit"> <i class="fa fa-user "></i> User info</a>
-                  <a class="dropdown-item" href="?page=login"> <i class="fa fa-sign-out" aria-hidden="true"></i>
+                  <a class="dropdown-item" href="edit.html"> <i class="fa fa-user "></i> User info</a>
+                  <a class="dropdown-item" href="login.html"> <i class="fa fa-sign-out" aria-hidden="true"></i>
                     Logout</a>
                 </div>
               </div>
@@ -70,14 +70,14 @@
                   <!--danh cho tage khac-->
                   <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a class="nav-link " href="?page=view-content">
-                        <i class="fa fa-calendar"></i>
-                        <span data-feather="home"></span>
-                        View content
-                      </a>
+                    <a class="nav-link " href="view-content.html">
+                      <i class="fa fa-calendar"></i>
+                      <span data-feather="home"></span>
+                      View content
+                    </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="?page=add-content">
+                      <a class="nav-link active" href="add-content.html">
                         <i class="fa fa-edit"></i>
                         Form content
                       </a>
@@ -92,13 +92,13 @@
               <div class="px-md-5">
                 <div
                   class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                  <h1 class="h2">Edit Profile</h1>
+                  <h1 class="h2">Add Content</h1>
                 </div>
                 <div>
                   <!--noi them phan con lai-->
                   <div class="card">
                     <div class="card-header">
-                      Profile Form Elements
+                      Content Form Elements
                     </div>
                     <div class="card-body">
                       <form action="">
@@ -108,24 +108,12 @@
                             placeholder="Enter the title">
                         </div>
                         <div class="mb-3">
-                          <label for="formGroupExampleInput2" class="form-label">Last Name</label>
-                          <input type="text" name="lastName" class="form-control" id="formGroupExampleInput2"
-                            placeholder="Enter the last name">
+                          <label for="floatingTextarea">Brief</label>
+                          <textarea class="form-control" name="brief" id="floatingTextarea"></textarea>
                         </div>
                         <div class="mb-3">
-                          <label for="formGroupExampleInput" class="form-label">Email</label>
-                          <input type="email" name="email" class="form-control" id="formGroupExampleInput"
-                            placeholder="Email">
-                        </div>
-                        <div class="mb-3">
-                          <label for="formGroupExampleInput2" class="form-label">Phone</label>
-                          <input type="text" name="phone" class="form-control" id="formGroupExampleInput2"
-                            placeholder="Enter your phone number">
-                        </div>
-                        <div class="mb-3">
-                          <label for="floatingTextarea">Description</label>
-                          <textarea class="form-control" name="description" placeholder="Leave a comment here"
-                            id="floatingTextarea"></textarea>
+                          <label for="floatingTextarea">Content</label>
+                          <textarea class="form-control" rows="5" name="content" id="floatingTextarea"></textarea>
                         </div>
                         <div class="col-12">
                           <button class="btn btn-primary bg-light " type="submit" name="btn_submit"
