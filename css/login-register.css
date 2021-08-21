@@ -1,0 +1,11 @@
+.row {
+	height: 100vh;
+}
+
+.text-bigger {
+	font-size: 120%;
+}
+
+label {
+	margin: 0;
+}
