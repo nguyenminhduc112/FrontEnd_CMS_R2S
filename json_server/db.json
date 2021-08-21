@@ -3,11 +3,15 @@
     {
       "email": "admin@gmail.com",
       "password": "admin!@#",
+      "username" : "admin",
+      "title" : "lorem",
       "id": 1
     },
     {
       "email": "vu@gmail.com",
       "password": "vu!@#",
+      "username" : "vudeptrai",
+      "title" : "lorem",
       "id": 3
     }
   ],
