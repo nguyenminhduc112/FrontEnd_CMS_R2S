@@ -21,7 +21,7 @@ $(document).ready(function () {
         } else {
             $.ajax({
                 url: "http://localhost:3000/users",
-                method: "POST",
+                method: "GET",
                 // data:{username:"vu",password:"vu!@#"},
                 success: function (data) {
                     {
@@ -49,5 +49,4 @@ $(document).ready(function () {
         }
         return false;
     });
-
 });

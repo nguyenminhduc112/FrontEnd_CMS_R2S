@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +20,7 @@
 		}
 	</style>
 </head>
+
 <body>
 	<div class="container-fluid bg-light">
 		<div class="row align-items-center">
@@ -27,27 +29,31 @@
 					<div class="card-header text-bigger">
 						Register
 					</div>
-					<form action="" class="card-body">
+					<form action="" method="POST" class="card-body">
 						<div class="form-group">
-							<input class="form-control" type="text" placeholder="User name"
-								name="username" id="username">
+							<input class="form-control" type="text" placeholder="User name" name="username"
+								id="username">
 						</div>
+						<p class="text-danger mt-1 d-none" id="error-username"></p>
 						<div class="form-group">
-							<input class="form-control" type="email" placeholder="E-mail"
-								name="email" id="email">
+							<input class="form-control" type="email" placeholder="E-mail" name="email" id="email">
 						</div>
+						<p class="text-danger mt-1 d-none" id="error-email"></p>
 						<div class="form-group">
-							<input class="form-control" type="password" placeholder="Password"
-								name="password" id="password">
+							<input class="form-control" type="password" placeholder="Password" name="password"
+								id="password">
 						</div>
+						<p class="text-danger mt-1 d-none" id="error-password"></p>
 						<div class="form-group">
-							<input class="form-control" type="password" placeholder="Re Password"
-								name="repassword" id="repassword">
+							<input class="form-control" type="password" placeholder="Re Password" name="repassword"
+								id="repassword">
 						</div>
+						<p class="text-danger mt-1 d-none" id="error-repassword"></p>
 						<div class="form-group">
-							<button type="submit" class="btn btn-success btn-block btn-lg">
+							<button type="submit" class="btn btn-success btn-block btn-lg" id="btn-register">
 								Register
 							</button>
+							<p class="text-danger mt-1 d-none" id="error"></p>
 						</div>
 						<a href="?page=login">Click here to Login</a>
 					</form>
@@ -59,11 +65,19 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
 		crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
 		crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+		integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+		integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="public/js/register.js"></script>
 </body>
+
 </html>
