@@ -1,4 +1,4 @@
-const form = document.getElementById('login-form')
+const form = document.getElementById('profile-form')
 
 form.addEventListener('submit', (event) => {
 	event.preventDefault()
