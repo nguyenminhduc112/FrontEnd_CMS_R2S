@@ -1,0 +1,8 @@
+{
+    "users": [
+      { "id": 1, "username": "admin", "password": "admin!@#" }
+    ],
+    "contents": [
+      { "id": 1, "title": "some comment", "content": "lorenmweadh" }
+    ]
+  }
