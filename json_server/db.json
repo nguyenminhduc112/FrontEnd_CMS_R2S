@@ -2,17 +2,23 @@
   "users": [
     {
       "email": "vu@gmail.com",
-      "password": "vu!@#",
+      "password": "vu!@#123",
       "username": "vudeptrai",
       "title": "lorem",
       "id": 1
     },
     {
       "username": "minhduc",
-      "password": "duc!@#",
+      "password": "duc!@#123",
       "email": "ganezing@gmail.com",
       "title": "",
       "id": 2
+    },
+    {
+      "username": "minhduc",
+      "email": "minhduc2001pt@gmail.com",
+      "password": "duc!@#123",
+      "id": 3
     }
   ],
   "contents": [

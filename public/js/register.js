@@ -1,108 +1,99 @@
+function getFormError(email,username, password, repassword) {
+    // Validate trường trống thì dùng thuộc tính HTML required cho <input>
+    // Không cần check bằng JavaScript
+
+    const EMAIL_REGEX = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (username == '') {
+        return "Username không được để trống";
+    } else {
+        if (username.length < 3) {
+            return "Username quá ngắn phải trên 3 ký tự";
+        }
+        if (username.length > 30) {
+            return "Username quá dài phải dưới 30 ký tự";
+        }
+    }
+    if (email == '') {
+        return "Email không được để trống";
+    } else {
+        if (!EMAIL_REGEX.test(email))
+            return 'Email không đúng định dạng';
+        if (email.length < 5)
+            return 'Email quá ngắn phải trên 5 ký tự';
+        if (email.length > 50)
+            return 'Email quá dài phải dưới 50 ký tự';
+    }
+    if (password == '') {
+        return "Password không được để trống";
+    } else {
+        if (password.length < 8)
+            return 'Password quá ngắn phải trên 8 ký tự';
+        if (password.length > 30)
+            return 'Password quá dài phải dưới 30 ký tự';
+    }
+    if (repassword == '') {
+        return "Repassword không được để trống";
+    } else {
+        if(password != repassword)
+            return "Xác nhận password không đúng";
+        if (repassword.length < 8)
+            return 'Repassword quá ngắn phải trên 8 ký tự';
+        if (repassword.length > 30)
+            return 'Repassword quá dài phải dưới 30 ký tự';
+    }
+
+    return null;
+}
+
+function handleError(message) {
+    $(".error").removeClass("d-none");
+    $(".error").text(message);
+    $("#password").val("");
+    $("#repassword").val("");
+    // $("#password").val("");
+    return false;
+}
 $(document).ready(function () {
     $("#btn-register").click(function () {
-        var email = $("#email").val();
-        var password = $("#password").val();
-        var username = $("#username").val();
-        var repassword = $("#repassword").val();
-        var filter_email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        var error = 0;
-        var alert_error = new Array;
-        // Kiểm tra username
-        if (username == '') {
-            error = 1;
-            alert_error['username'] = "Username Không Được Để Trống";
-        } else {
-            if (username.length > 30) {
-                error = 1;
-                alert_error['username'] = "Username Chỉ Giới Hạn 30 Ký Tự";
-            }
-        }
-        // Kiểm tra email
-        if (email == '') {
-            error = 1;
-            alert_error['email'] = "Email Không Được Để Trống";
-        } else {
-            if (email.length > 50) {
-                error = 1;
-                alert_error['email'] = "Email Chỉ Giới Hạn 50 Ký Tự";
-            }
-            if (!filter_email.test(email)) {
-                error = 1;
-                alert_error['email'] = "Email Không Đúng Định Dạng";
-            }
-        }
-        // Kiểm tra password
-        if (password == '') {
-            error = 1;
-            alert_error['password'] = "Password Không Được Để Trống";
-        } else {
-            if (password.length > 30) {
-                error = 1;
-                alert_error['password'] = "Password Chỉ Giới Hạn 30 Ký Tự";
-            }
-        }
-        // Kiểm tra repassword
-        if (repassword == '') {
-            error = 1;
-            alert_error['repassword'] = "Repassword Không Được Để Trống";
-        } else {
-            if (repassword.length > 30) {
-                error = 1;
-                alert_error['repassword'] = "Repassword Chỉ Giới Hạn 30 Ký Tự";
-            }
-            if (password != repassword) {
-                error = 1;
-                alert_error['repassword'] = "Xác Nhận Passowrd Không Đúng";
-            }
-        }
-        // Kiểm tra email đã dược sử dụng
-        // if (error == 0) {
-        //     $.ajax({
-        //         url: "http://localhost:3000/users",
-        //         method: "GET",
-        //         success: function (data) {
-        //             for (let i = 0; i < data.length; i++) {
-        //                 if (data[i].email == email) {
-        //                     error = 2;
-        //                     alert_error['error'] = "Email Đã Sử Dụng";
-        //                 }
-        //             }
-        //         }
-        //     });
-        // }
+        const email = $("#email").val();
+        const password = $("#password").val();
+        const username = $("#username").val();
+        const repassword = $("#repassword").val();
+        const error = getFormError(email, username, password, repassword);
+        if (error)
+            return handleError(error);
 
-        if (error == 0) {
-            $.ajax({
-                url: "http://localhost:3000/users",
-                method: "POST",
-                data: {
-                    username: username,
-                    password: password,
-                    email: email,
-                    title: ""
-                },
-                success: function (data) {
-                    alert("Đăng Ký Thành Công");
-                    window.location = "?page=login";
-                },
-                error: function () {
-                    console.log("Thêm Không thành công");
+        // Kiểm tra email đã dược sử dụng
+
+        $.ajax({
+            url: "http://localhost:3000/users",
+            method: "GET",
+            success: function (data) {
+                const emailExists = data.find(user =>
+                    user.email === email)
+                if (emailExists) {
+                    return handleError('Email đã sử dụng');
+                } else {
+                    $.ajax({
+                        url: "http://localhost:3000/users",
+                        method: "POST",
+                        data:{username:username,email:email,password:password},
+                        success: function (data) {
+                           alert("Đăng Ký Thành Công Tài Khoản Với Email " + email);
+                           window.location = '?page=login';
+
+                        },
+                        error: function () {
+                            handleError('Không Thể Kiểm Tra Dữ Liệu');
+                        }
+                    });
                 }
-            });
-        } else {
-            $("#error").removeClass("d-none");
-            $("#error-username").removeClass("d-none");
-            $("#error-password").removeClass("d-none");
-            $("#error-repassword").removeClass("d-none");
-            $("#error-email").removeClass("d-none");
-            $("#error-username").text(alert_error['username']);
-            $("#error").text(alert_error['error']);
-            $("#error-password").text(alert_error['password']);
-            $("#error-repassword").text(alert_error['repassword']);
-            $("#error-email").text(alert_error['email']);
-            $("#password").val("");
-            $("#repassword").val("");
-        }
+            },
+            error: function () {
+                handleError('Không Thể Kiểm Tra Dữ Liệu');
+            }
+        });
+
         return false;
     });
 });

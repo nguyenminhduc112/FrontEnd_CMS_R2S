@@ -37,6 +37,6 @@ function fetchData() {
 }
 
 function displayContent() {
-	document.getElementById('loading').style.display = 'none'
-	document.getElementById('main').style.display = 'unset'
+	document.getElementById('loading').style.display = 'none';
+	document.getElementById('main').style.display = 'block';
 }
