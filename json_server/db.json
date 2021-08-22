@@ -1,21 +1,13 @@
 {
   "users": [
     {
-      "email": "vu@gmail.com",
-      "password": "vu!@#123",
-      "description": "",
-      "username": "vudeptrai",
-      "title": "lorem",
-      "phone": "",
-      "id": 1
-    },
-    {
-      "title": "Nguyễn Minh Đức",
+      "title": "Nguyễn Minh Đức Đẹp Trai Cute",
       "username": "minhduc",
       "email": "ganezing@gmail.com",
+      "password": "duc!@#123",
       "phone": "0385539722",
-      "description": "Xin chào tui là Đức",
-      "id": 2
+      "description": "Hi Mọi Người Mình Là Đức Đây",
+      "id": 1
     }
   ],
   "contents": [
@@ -67,6 +59,13 @@
       "content": "This is a looooooooooooooong contentThis is a looooooooooooooong content",
       "created_date": "2021/8/22 18:6",
       "id": 7
+    },
+    {
+      "title": "tai sao em lai bo anh the baybe",
+      "brief": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      "created_date": "2021/8/22 20:42",
+      "id": 8
     }
   ]
 }

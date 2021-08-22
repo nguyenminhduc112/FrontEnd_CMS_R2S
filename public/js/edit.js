@@ -6,7 +6,8 @@ $(document).ready(function () {
         var email = $("#email").val();
         var phone = $("#phone").val();
         var description = $("#description").val();
-        var data = {title:title,username:username,email:email,phone:phone,description:description};
+        var password = $("#password").val();
+        var data = {title:title,username:username,email:email,password:password,phone:phone,description:description};
         // console.log(data);
         $.ajax({
             url : "http://localhost:3000/users/" + id ,
@@ -29,6 +30,7 @@ $(document).ready(function () {
                     $("#username").val(data[i].username);
                     $("#email").val(data[i].email);
                     $("#phone").val(data[i].phone);
+                    $("#password").val(data[i].password);
                     $("#description").val(data[i].description);
                 }
             }
