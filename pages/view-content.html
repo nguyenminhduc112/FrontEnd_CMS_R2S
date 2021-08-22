@@ -89,7 +89,13 @@
 
             <!-- content -->
             <section class="col-md-9 px-0 ml-sm-auto col-lg-10">
-              <div class="px-md-5">
+              <div class="px-md-5" id="loading">
+                <div
+                  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                  <h1 class="h2">Loading</h1>
+                </div>
+              </div>
+              <div class="px-md-5" id="main" style="display: none;">
                 <div
                   class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                   <h1 class="h2">View Content</h1>
@@ -108,8 +114,8 @@
                           <th>Created Date</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
+                      <tbody id="body">
+                        <!-- <tr>
                           <td>1</td>
                           <td>Lorem ipsum dolor sit amet</td>
                           <td>
@@ -134,7 +140,7 @@
                             Vestibulum tincidunt est vitae ultrices accumsan.
                           </td>
                           <td>31/08/2016 15:09</td>
-                        </tr>
+                        </tr> -->
                       </tbody>
                     </table>
                   </div>
@@ -150,15 +156,17 @@
 
 
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <script src="public/js/view-content.js"></script>
 </body>
 
 </html>
