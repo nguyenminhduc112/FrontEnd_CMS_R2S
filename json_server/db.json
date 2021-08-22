@@ -3,22 +3,19 @@
     {
       "email": "vu@gmail.com",
       "password": "vu!@#123",
+      "description": "",
       "username": "vudeptrai",
       "title": "lorem",
+      "phone": "",
       "id": 1
     },
     {
+      "title": "Nguyễn Minh Đức",
       "username": "minhduc",
-      "password": "duc!@#123",
       "email": "ganezing@gmail.com",
-      "title": "",
+      "phone": "0385539722",
+      "description": "Xin chào tui là Đức",
       "id": 2
-    },
-    {
-      "username": "minhduc",
-      "email": "minhduc2001pt@gmail.com",
-      "password": "duc!@#123",
-      "id": 3
     }
   ],
   "contents": [

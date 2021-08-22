@@ -32,8 +32,36 @@ function handleError(message) {
     $("#password").val("");
     return false;
 }
+function createCookie(name, value, exDay) {
+    let now = new Date();
+    now.setTime(now.getTime() + exDay * 24 * 60 * 60 * 1000);
+    document.cookie = name + "=" + value + ";expires=" + now.toUTCString() + ";path=/";
+}
 
+function deleteCookie(name) {
+    let now = new Date();
+    now.setTime(now.getTime() - 60 * 1000);
+    document.cookie = name + "=;expires=" + now.toUTCString() + ";path=/";
+}
+
+function getValueCookie(name) {
+    let cookieStr = document.cookie;
+    if (cookieStr) {
+        let cookieArray = cookieStr.split("; ");
+        for (let i = 0; i < cookieArray.length; i++) {
+            let str = cookieArray[i];
+            let arr = str.split("=");
+            if (arr.length == 2) {
+                if (arr[0] == name) {
+                    return arr[1];
+                }
+            }
+
+        }
+    }
+}
 $(document).ready(function () {
+    // createCookie('id_user',1);
     $("#btn-login").click(function () {
         const email = $("#email").val();
         const password = $("#password").val();
@@ -48,9 +76,17 @@ $(document).ready(function () {
             success: function (data) {
                 const userExists = data.find(user =>
                     user.email === email && user.password === password)
-                if (!userExists)
+                if (!userExists) {
                     return handleError('Tài khoản không đúng');
-                window.location = '?page=edit';
+                } else {
+                    for(let i = 0 ; i < data.length ; i++){
+                        if(email == data[i].email){
+                            var id = data[i].id;
+                        }
+                    }
+                    createCookie('id_user' , id);
+                    window.location = '?page=edit';
+                }
             },
             error: function () {
                 handleError('Không thể gửi dữ liệu')

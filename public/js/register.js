@@ -77,7 +77,7 @@ $(document).ready(function () {
                     $.ajax({
                         url: "http://localhost:3000/users",
                         method: "POST",
-                        data:{username:username,email:email,password:password},
+                        data:{username:username,email:email,password:password,title:"",description:"",phone:""},
                         success: function (data) {
                            alert("Đăng Ký Thành Công Tài Khoản Với Email " + email);
                            window.location = '?page=login';

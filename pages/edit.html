@@ -43,7 +43,7 @@
                 </button>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="?page=edit"> <i class="fa fa-user "></i> User info</a>
-                  <a class="dropdown-item" href="?page=login"> <i class="fa fa-sign-out" aria-hidden="true"></i>
+                  <a class="dropdown-item logout" href=""> <i class="fa fa-sign-out" aria-hidden="true"></i>
                     Logout</a>
                 </div>
               </div>
@@ -102,38 +102,38 @@
                       Profile Form Elements
                     </div>
                     <div class="card-body">
-                      <form action="">
+                      <form action="" method="POST">
                         <div class="mb-3">
                           <label for="formGroupExampleInput" class="form-label">Title</label>
-                          <input type="text" name="title" class="form-control" id="formGroupExampleInput"
+                          <input type="text" name="title" class="form-control" id="title"
                             placeholder="Enter the title">
                         </div>
                         <div class="mb-3">
                           <label for="formGroupExampleInput2" class="form-label">Last Name</label>
-                          <input type="text" name="lastName" class="form-control" id="formGroupExampleInput2"
+                          <input type="text" name="lastName" class="form-control" id="username"
                             placeholder="Enter the last name">
                         </div>
                         <div class="mb-3">
                           <label for="formGroupExampleInput" class="form-label">Email</label>
-                          <input type="email" name="email" class="form-control" id="formGroupExampleInput"
+                          <input type="email" name="email" class="form-control" id="email"
                             placeholder="Email">
                         </div>
                         <div class="mb-3">
                           <label for="formGroupExampleInput2" class="form-label">Phone</label>
-                          <input type="text" name="phone" class="form-control" id="formGroupExampleInput2"
+                          <input type="text" name="phone" class="form-control" id="phone"
                             placeholder="Enter your phone number">
                         </div>
                         <div class="mb-3">
                           <label for="floatingTextarea">Description</label>
                           <textarea class="form-control" name="description" placeholder="Leave a comment here"
-                            id="floatingTextarea"></textarea>
+                            id="description"></textarea>
                         </div>
                         <div class="col-12">
-                          <button class="btn btn-primary bg-light " type="submit" name="btn_submit"
+                          <button class="btn btn-primary bg-light " type="submit" name="btn_submit" id="id-update"
                             style="color: black;">Submit
                             Buttom</button>
                           <button class="btn btn-primary bg-light " type="submit" name="btn_reser"
-                            style="color: black;">Reser
+                            style="color: black;">Reset
                             Button</button>
                         </div>
                       </form>
@@ -158,6 +158,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+    <script src="public/js/edit.js"></script>
+    <script src="public/js/app.js"></script>
 </body>
 
 </html>
