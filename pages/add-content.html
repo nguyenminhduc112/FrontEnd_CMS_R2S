@@ -20,7 +20,7 @@
     }
   </style>
   <link href="public/css/bootstrap.css" rel="stylesheet">
-  
+
   <!-- Custom styles for this template -->
   <link href="public/css/dashboard.css" rel="stylesheet">
 </head>
@@ -105,24 +105,25 @@
                     <div class="card-body">
                       <form action="">
                         <div class="mb-3">
-                          <label for="formGroupExampleInput" class="form-label">Title</label>
-                          <input type="text" name="title" class="form-control" id="formGroupExampleInput"
-                            placeholder="Enter the title">
+                          <label for="title" class="form-label">Title</label>
+                          <input type="text" name="title" class="form-control" id="title"
+                            placeholder="Enter the title" required>
                         </div>
                         <div class="mb-3">
-                          <label for="floatingTextarea">Brief</label>
-                          <textarea class="form-control" name="brief" id="floatingTextarea"></textarea>
+                          <label for="brief">Brief</label>
+                          <textarea class="form-control" name="brief" id="brief" required></textarea>
                         </div>
                         <div class="mb-3">
-                          <label for="floatingTextarea">Content</label>
-                          <textarea class="form-control" rows="5" name="content" id="floatingTextarea"></textarea>
+                          <label for="content">Content</label>
+                          <textarea class="form-control" rows="5" name="content" id="main-content" required></textarea>
                         </div>
                         <div class="col-12">
                           <button class="btn btn-primary bg-light " type="submit" name="btn_submit"
+                            id="submit"
                             style="color: black;">Submit
                             Buttom</button>
-                          <button class="btn btn-primary bg-light " type="submit" name="btn_reser"
-                            style="color: black;">Reser
+                          <button class="btn btn-primary bg-light " type="submit" name="btn_reset"
+                            style="color: black;">Reset
                             Button</button>
                         </div>
                       </form>
@@ -145,6 +146,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <script src="public/js/add-content.js"></script>
 </body>
 
 </html>
