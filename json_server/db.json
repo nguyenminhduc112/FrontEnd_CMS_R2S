@@ -1,13 +1,22 @@
 {
   "users": [
     {
-      "title": "Nguyễn Minh Đức Đẹp Trai Cute",
       "username": "minhduc",
-      "email": "ganezing@gmail.com",
-      "password": "duc!@#123",
-      "phone": "0385539722",
-      "description": "Hi Mọi Người Mình Là Đức Đây",
+      "email": "minhduc2001pt@gmail.com",
+      "password": "48aad493ce8b9647b4e897bb0d6eebef",
+      "title": "",
+      "description": "",
+      "phone": "",
       "id": 1
+    },
+    {
+      "username": "vukhongkhoc",
+      "email": "vu@gmail.com",
+      "password": "ad7d514c37aaf1969d7396fc4e29f49e",
+      "title": "",
+      "description": "",
+      "phone": "",
+      "id": 2
     }
   ],
   "contents": [
