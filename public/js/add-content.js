@@ -1,9 +1,12 @@
 $(document).ready(function () {
 	$('#submit').click(function () {
+		// Lấy dữ liệu user nhập và kiểm tra, nếu có lỗi thì thông báo
 		const data = getFormData()
 		const errorMessage = getErrorMessage(data.title, data.brief, data.content)
 		if (errorMessage)
 			return handleError(errorMessage)
+
+		// Gọi post request để thêm content
 		$.post('http://localhost:3000/contents', data, () => {
 			window.location.replace('?page=view-content')
 		})
@@ -11,6 +14,7 @@ $(document).ready(function () {
 	})
 })
 
+// Lấy các dữ liệu từ form
 function getFormData() {
 	const title = $('#title').val()
 	const brief = $('#brief').val()
@@ -19,6 +23,8 @@ function getFormData() {
 	return { title, brief, content, created_date }
 }
 
+// Validate các dữ liệu form content
+// Trả về thông báo lỗi, hoặc null nếu không có lỗi
 function getErrorMessage(title, brief, content) {
 	if (!title)
 		return 'Title is required'
@@ -43,16 +49,18 @@ function getErrorMessage(title, brief, content) {
 	return null
 }
 
+// Hành động xử lý khi có lỗi xảy ra
 function handleError(message) {
 	alert(message)
 	return false
 }
 
+// Hàm định dạng ngày tháng theo chuẩn dd/MM/yyyy hh:mm
 function formatDate(date) {
 	const year = date.getFullYear()
 	const month = date.getMonth() + 1
 	const day = date.getDate()
 	const hours = date.getHours()
 	const minutes = date.getMinutes()
-	return `${year}/${month}/${day} ${hours}:${minutes}`
+	return `${day}/${month}/${year} ${hours}:${minutes}`
 }
