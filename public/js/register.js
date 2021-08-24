@@ -1,3 +1,4 @@
+//============= Hàm Mã Hóa MD5 =================//
 var md5 = function (string) {
  
     function RotateLeft(lValue, iShiftBits) {
@@ -212,10 +213,13 @@ var md5 = function (string) {
 
     return temp.toLowerCase();
 }
+//============= Hàm Validation Form =================//
+/*
+    1.Kiểm tra các dữ liệu email , username, password,repassword
+    2. Kiểm tra dữ liệu trống và định dạng email và giới hạn ký tự của các dữ liệu
+    3. Không lỗi thì trả về giả trị Null
+*/
 function getFormError(email,username, password, repassword) {
-    // Validate trường trống thì dùng thuộc tính HTML required cho <input>
-    // Không cần check bằng JavaScript
-
     const EMAIL_REGEX = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     if (username == '') {
         return "Username không được để trống";
@@ -258,7 +262,7 @@ function getFormError(email,username, password, repassword) {
 
     return null;
 }
-
+//============= Hàm Xuất Ra lỗi=================//
 function handleError(message) {
     $(".error").removeClass("d-none");
     $(".error").text(message);
@@ -268,6 +272,13 @@ function handleError(message) {
     return false;
 }
 $(document).ready(function () {
+    // -------------- Chức Năng Đăng Ký User --------------//
+    /*
+        1. Khi click vào nút đăng ký thì lấy các giá trị : email,username,password,repassword
+        2.Tạo error và gọi hàm getFormError(email, username, password, repassword) nếu có lỗi thì error sẽ không null và xuất ra lỗi bằng hàm handleError
+        3.Gọi ajax kiểm tra email đã sử dụng 
+        4. Khi kiểm tra email đã tồn tại thì thông báo lỗi bằng hàm getFormError("Email đã sử dụng").Còn Kiểm tra không tồn email thì gọi ajax Thêm User đã nhập xong thông báo cho người dùng và chuyển hướng tới trang login
+    */
     $("#btn-register").click(function () {
         const email = $("#email").val();
         const password = $("#password").val();
@@ -278,7 +289,6 @@ $(document).ready(function () {
             return handleError(error);
 
         // Kiểm tra email đã dược sử dụng
-
         $.ajax({
             url: "http://localhost:3000/users",
             method: "GET",

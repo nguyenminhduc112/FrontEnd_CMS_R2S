@@ -17,6 +17,15 @@
       "description": "",
       "phone": "",
       "id": 2
+    },
+    {
+      "title": "ducdeptrai",
+      "username": "minhduc",
+      "email": "minhduc2001pt@gmail.com",
+      "password": "48aad493ce8b9647b4e897bb0d6eebef",
+      "phone": "0385539722",
+      "description": "dadad",
+      "id": 3
     }
   ],
   "contents": [
@@ -40,41 +49,6 @@
       "brief": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan.",
       "content": "",
       "created_date": "31/08/2016 15:09"
-    },
-    {
-      "title": "1",
-      "brief": "2",
-      "content": "3",
-      "created_date": "2021/8/22 17:50",
-      "id": 4
-    },
-    {
-      "title": "This is a title",
-      "brief": "This is a looooooooooooooong brief",
-      "content": "This is a looooooooooooooong content\nThis is a looooooooooooooong content",
-      "created_date": "2021/8/22 18:4",
-      "id": 5
-    },
-    {
-      "title": "This is a looooooooooooooong content",
-      "brief": "This is a looooooooooooooong content",
-      "content": "This is a looooooooooooooong contentThis is a looooooooooooooong content",
-      "created_date": "2021/8/22 18:6",
-      "id": 6
-    },
-    {
-      "title": "This is a looooooooooooooong content",
-      "brief": "This is a looooooooooooooong content",
-      "content": "This is a looooooooooooooong contentThis is a looooooooooooooong content",
-      "created_date": "2021/8/22 18:6",
-      "id": 7
-    },
-    {
-      "title": "tai sao em lai bo anh the baybe",
-      "brief": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ",
-      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-      "created_date": "2021/8/22 20:42",
-      "id": 8
     }
   ]
 }
