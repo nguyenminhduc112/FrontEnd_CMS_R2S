@@ -4,7 +4,7 @@ function deleteCookie(name) {
     now.setTime(now.getTime() - 60 * 1000);
     document.cookie = name + "=;expires=" + now.toUTCString() + ";path=/";
 }
-//============= Hàm Xóa Cookie =================//
+//============= Hàm Lấy Cookie =================//
 function getValueCookie(name) {
     let cookieStr = document.cookie;
     if (cookieStr) {
@@ -54,6 +54,7 @@ $(document).ready(function () {
     */
     $("a.logout").click(function(){
         deleteCookie("id_user");
+        deleteCookie("remember_me");
         window.location = "?page=login";
         // Return false dùng dể tắt khi chức năng load page của a.logout
         return false;

@@ -1,22 +1,13 @@
 {
   "users": [
     {
-      "username": "minhduc",
-      "email": "minhduc2001pt@gmail.com",
-      "password": "48aad493ce8b9647b4e897bb0d6eebef",
-      "title": "",
-      "description": "",
-      "phone": "",
-      "id": 1
-    },
-    {
       "username": "vukhongkhoc",
       "email": "vu@gmail.com",
       "password": "ad7d514c37aaf1969d7396fc4e29f49e",
       "title": "",
       "description": "",
       "phone": "",
-      "id": 2
+      "id": 1
     },
     {
       "title": "ducdeptrai",
@@ -24,8 +15,8 @@
       "email": "minhduc2001pt@gmail.com",
       "password": "48aad493ce8b9647b4e897bb0d6eebef",
       "phone": "0385539722",
-      "description": "dadad",
-      "id": 3
+      "description": "Xin chào Minh là Đức Thành Viên Cọm Cáng Trong Băng Cute <3",
+      "id": 2
     }
   ],
   "contents": [
